@@ -1,0 +1,30 @@
+import java.io.*;
+import java.net.*;
+
+public class MainframeJCLSubmitter {
+    public static void main(String[] args) {
+        String mainframeHost = "mainframe.example.com";
+        int port = 21; // FTP Port
+        String username = "USERID";
+        String password = "PASSWORD";
+
+        try {
+            Socket socket = new Socket(mainframeHost, port);
+            PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
+            BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+
+            // Authenticate
+            out.println("USER " + username);
+            out.println("PASS " + password);
+
+            // Submit JCL
+            String jcl = "your-jcl-content-here";
+            out.println("PUT //DD:DATA " + jcl);
+
+            // Close connection
+            socket.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
