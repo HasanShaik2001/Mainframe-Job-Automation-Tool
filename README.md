@@ -112,3 +112,31 @@ Display the outputs in the application or save them as files.
 Design a user-friendly GUI for job submission, monitoring, and output retrieval.
 
 Use JavaFX or Swing to build the front-end.
+
+
+### Challenges & Solutions:
+
+
+
+1. Mainframe Security:
+
+Ensure secure connections using SSH or encrypted FTP.
+
+Implement proper authentication and authorization.
+
+
+
+2. Error Handling:
+
+Handle errors like connection failures or job submission issues gracefully.
+
+Provide clear error messages to the user.
+
+
+
+3. Mainframe-Specific Knowledge:
+
+Familiarize yourself with mainframe commands and JCL syntax.
+
+
+This project will give you hands-on experience with Java, JCL, and mainframe integration while addressing real-world automation needs. Let me know if you'd like more detailed guidance on any specific part!
